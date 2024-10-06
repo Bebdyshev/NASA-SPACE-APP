@@ -36,8 +36,6 @@ app.add_middleware(
 )
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
-client = OpenAI(api_key="")
-pc = Pinecone(api_key="")
 index = pc.Index("nasa")
 parser = JSONParser(strict=False)
 
